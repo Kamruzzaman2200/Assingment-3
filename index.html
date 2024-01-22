@@ -9,17 +9,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/003837e57d.js" crossorigin="anonymous"></script>
     <style>
         .font-manrope {
             font-family: "Manrope", sans-serif;
         }
     </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'btn-color': '#FF4240',
+              }
+            }
+          }
+        }
+      </script>
     <title>Hockey's</title>
 
 </head>
 
 <body class="font-manrope">
-    <header>
+    <header class="md:container md:mx-auto">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -32,7 +45,7 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold text-base">
                             <li><a>Home</a></li>
                             <li><a>About</a></li>
                             <li><a>Pages</a></li>
@@ -43,8 +56,8 @@
                     <a class="btn btn-ghost text-xl font-extrabold">Hockey<span class="text-orange-600">’</span>s</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a class="text-orange-600">Home</a></li>
+                    <ul class="menu menu-horizontal px-1 text-xl">
+                        <li><a class="text-btn-color">Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Pages</a></li>
                         <li><a>Blog</a></li>
@@ -52,9 +65,11 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
+                    
                     <div>
-                        <button class="btn bg-orange-600">Get Ticket</button>
+                        <a><img class="btn-ghost " src="Images/bx-search-alt-2.svg" alt=""></a>
                     </div>
+                    <button class="btn bg-orange-600 text-white">Get Ticket</button>
                 </div>
             </div>
         </nav>
